@@ -1,3 +1,5 @@
+// T: O(n^2)
+
 const bubbleSort = (arr) => {
   let isSwapped;
   for (let i = 0; i < arr.length; i++) {
