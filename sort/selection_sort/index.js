@@ -1,10 +1,8 @@
 // T: O(n^2)
 
 const selectionSort = (arr) => {
-  let lowest = 0;
-
   for (let i = 0; i < arr.length; i++) {
-    lowest = i;
+    let lowest = i;
 
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[j] < arr[lowest]) {
