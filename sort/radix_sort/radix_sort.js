@@ -1,35 +1,31 @@
 // T: O(n*k)
 
 // radix sort in ascending order
-
-const radixSort = (arr) => {
+const radixSort = (arr, order) => {
   let maxNum = arr[0];
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > maxNum) {
-      maxNum = arr[i];
-    }
+    if (arr[i] > maxNum) maxNum = arr[i];
   }
-  //   console.log(Number(maxNum.toString().length));
 
   let digit = 0;
 
   while (maxNum / 10 ** digit > 0) {
-    helper(arr, digit);
+    ascendingSort(arr, digit);
     digit++;
   }
 
   return arr;
 };
 
-function helper(arr, digit) {
+function ascendingSort(arr, digit) {
   let countArr = new Array(10).fill(0);
   let sortedArr = new Array(arr.length).fill(0);
 
-  let whichDigit = 10 ** digit;
+  const whichDigit = 10 ** digit;
 
-  for (let num of arr) {
-    const countIdx = Math.floor(num / whichDigit) % 10;
+  for (let i = 0; i < arr.length; i++) {
+    const countIdx = Math.floor(arr[i] / whichDigit) % 10;
     countArr[countIdx]++;
   }
 
@@ -52,5 +48,7 @@ function helper(arr, digit) {
   return arr;
 }
 
-console.log(radixSort([170, 45, 75, 90, 802, 24, 2, 66])); // [2, 24, 45, 66, 75, 90, 170, 802]
-console.log(radixSort([8562, 454, 9028, 415, 67, 234, 85, 12, 2])); // [2, 12, 67, 85, 234, 415, 454, 8562, 9028]
+console.log(radixSort([170, 45, 75, 90, 802, 24, 2, 66], "ascending")); // [2, 24, 45, 66, 75, 90, 170, 802]
+console.log(
+  radixSort([8562, 454, 9028, 415, 67, 234, 85, 12, 2], "descending").reverse()
+); // [2, 12, 67, 85, 234, 415, 454, 8562, 9028]
