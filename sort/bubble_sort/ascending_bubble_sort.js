@@ -1,4 +1,6 @@
+// Ascending bubble sort
 // T: O(n^2)
+// S: O(1)
 
 const bubbleSort = (arr) => {
   let isSwapped;
