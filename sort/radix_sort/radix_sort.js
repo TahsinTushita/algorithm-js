@@ -1,4 +1,5 @@
 // T: O(n*k)
+// S: O(n + k)
 
 // radix sort in ascending order
 const radixSort = (arr, order) => {
