@@ -49,7 +49,7 @@ class BinarySearchTree {
 
     while (q.length) {
       let curr = q.shift();
-      result.push(curr);
+      result.push(curr.value);
 
       if (curr.left) q.push(curr.left);
       if (curr.right) q.push(curr.right);
