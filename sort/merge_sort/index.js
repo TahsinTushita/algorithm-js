@@ -1,4 +1,5 @@
 // T: O(nlog n)
+// S: O(n)
 
 const merge = (arr1, arr2) => {
   const results = [];
