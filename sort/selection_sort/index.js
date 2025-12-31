@@ -1,4 +1,5 @@
 // T: O(n^2)
+// S: O(1)
 
 const selectionSort = (arr) => {
   for (let i = 0; i < arr.length; i++) {
