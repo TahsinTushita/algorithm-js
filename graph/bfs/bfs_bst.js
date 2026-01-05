@@ -1,3 +1,6 @@
+// T: O(n)
+// S: O(n)
+
 class Node {
   constructor(value) {
     this.value = value;
