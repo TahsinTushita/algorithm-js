@@ -52,4 +52,4 @@ function ascendingSort(arr, digit) {
 console.log(radixSort([170, 45, 75, 90, 802, 24, 2, 66], "ascending")); // [2, 24, 45, 66, 75, 90, 170, 802]
 console.log(
   radixSort([8562, 454, 9028, 415, 67, 234, 85, 12, 2], "descending").reverse()
-); // [2, 12, 67, 85, 234, 415, 454, 8562, 9028]
+); // [9028, 8562, 454, 415, 234, 85,67, 12, 2]
